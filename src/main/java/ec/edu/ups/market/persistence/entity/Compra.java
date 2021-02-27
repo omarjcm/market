@@ -2,6 +2,7 @@ package ec.edu.ups.market.persistence.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Table(name = "compras")
 public class Compra {
@@ -22,7 +23,7 @@ public class Compra {
     private String comentario;
     private String estado;
 
-    @ManyToone
+    @ManyToOne
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 

@@ -1,9 +1,6 @@
 package ec.edu.ups.market.persistence.entity;
 
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.xml.namespace.QName;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "compras_productos")
