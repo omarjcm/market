@@ -22,6 +22,13 @@ public class Compra {
     private String comentario;
     private String estado;
 
+    @ManyToone
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
+    private Cliente cliente;
+
+    @OneToMany(mappedBy = "producto")
+    private List<ComprasProducto> productos;
+
     public Integer getIdCompra() {
         return idCompra;
     }
