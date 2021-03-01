@@ -27,7 +27,7 @@ public class ProductoRepository implements ProductRepository {
 
     @Override
     public Optional<List<Product>> getByCategoryId(int categoryId) {
-        List<Producto> productos = productoCrudRepository.findByIdCategoriaOOrderByNombreAsc(categoryId);
+        List<Producto> productos = productoCrudRepository.findByIdCategoriaOrderByNombreAsc(categoryId);
         return Optional.of( mapper.toProducts(productos) );
     }
 

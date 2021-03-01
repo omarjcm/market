@@ -20,6 +20,9 @@ public class ComprasProducto {
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
     private Producto producto;
 
+    public ComprasProducto() {
+    }
+
     public ComprasProductoPK getId() {
         return id;
     }
